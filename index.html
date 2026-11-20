@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Exame Chunin | Academia Ninja</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script><script src="quiz.js" defer></script>
+</head>
+<body>
+<header><div class="wrap topbar"><a class="brand" href="#menu" aria-label="Academia Ninja, menu inicial"><span class="crest" aria-hidden="true">✥</span> ACADEMIA NINJA</a><nav aria-label="Navegação principal"><a href="#menu">Menu</a><a href="#cruzadinha">Cruzadinha</a><a href="#quiz-kakashi">Quiz</a></nav></div></header>
+<main class="wrap">
+  <section class="hero"><div><b>VILA OCULTA DA FOLHA</b><h1>Exame Chunin</h1><p>Arquitetura Computacional</p></div></section>
+  <section id="missions" aria-labelledby="menu-title">
+    <h2 id="menu-title" tabindex="-1">Escolha sua missão</h2>
+    <div class="mission-grid">
+      <a class="mission-card" href="#cruzadinha"><div class="card-art puzzle-art" aria-hidden="true"><span>N</span><span>I</span><span>N</span><span>J</span><span>A</span></div><div class="card-copy"><h3>Cruzadinha</h3><p>Decifre 16 termos de arquitetura pelas pistas horizontais e verticais.</p><strong>Jogar cruzadinha</strong></div></a>
+      <a class="mission-card" href="#quiz-kakashi"><div class="card-art sensei-art" aria-hidden="true"></div><div class="card-copy"><h3>Quiz do Kakashi</h3><p>Teste seus conhecimentos em 10 questões com correção do sensei.</p><strong>Iniciar quiz</strong></div></a>
+    </div>
+  </section>
+  <div class="layout" id="crossword" hidden>
+    <section class="panel"><div class="bar"><h2 id="board-title" tabindex="-1">Tabuleiro</h2><strong id="score" aria-live="polite">0 de 16 palavras</strong></div>
+      <progress id="progress" max="16" value="0" aria-label="Palavras corretas"></progress>
+      <div class="paper"><div id="board"></div></div><div class="active" id="active" aria-live="polite"></div>
+      <div class="actions"><button id="check">Conferir</button><button id="reset">Reiniciar</button></div><p id="result" role="status"></p>
+    </section>
+    <aside class="panel"><h2>Pergaminho de pistas</h2><p>Escolha uma pista e digite nas casas destacadas.</p><div id="clues"></div></aside>
+  </div>
+  <section class="quiz-layout" id="quiz" hidden>
+    <div class="mentor"><img src="kakashi.webp" alt="Kakashi com o pergaminho do exame"><div><small>SEU SENSEI</small><h2>Kakashi Hatake</h2></div></div>
+    <div class="panel quiz-panel"><div class="bar"><b id="step"></b><strong id="quiz-score"></strong></div><progress id="quiz-progress" aria-label="Questões respondidas"></progress>
+    <h2 id="question" tabindex="-1"></h2><div id="answers"></div><p id="feedback" role="status"></p><button id="next" hidden>Próxima questão</button></div>
+  </section>
+</main></body></html>
